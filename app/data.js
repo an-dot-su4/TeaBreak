@@ -75,7 +75,7 @@
       id: "darjeeling-1st", name: "ダージリン ファーストフラッシュ", origin: "インド",
       profile: "若々しく爽やか。緑茶に近い軽やかな渋み。",
       caffeine: "medium", hot: true, iced: true, milk: "no", flavor: "plain",
-      scenes: ["focus", "refresh", "special"], brew: "ストレートでやや薄めに。香りを楽しんで。",
+      scenes: ["focus", "refresh", "special", "morning"], brew: "ストレートでやや薄めに。香りを楽しんで。",
       brandIds: ["lupicia", "mariage", "twinings"]
     },
     {
@@ -96,7 +96,7 @@
       id: "nilgiri", name: "ニルギリ", origin: "インド",
       profile: "クセが少なく爽やか。アイスにも向く万能タイプ。",
       caffeine: "medium", hot: true, iced: true, milk: "ok", flavor: "plain",
-      scenes: ["refresh", "afterMeal", "focus"], brew: "ストレートやアイスで軽やかに。",
+      scenes: ["refresh", "afterMeal", "focus", "morning"], brew: "ストレートやアイスで軽やかに。",
       brandIds: ["lupicia", "dilmah"]
     },
     {
@@ -117,7 +117,7 @@
       id: "nuwara", name: "ヌワラエリヤ", origin: "スリランカ",
       profile: "軽やかで華やか。「セイロンのシャンパン」。",
       caffeine: "medium", hot: true, iced: true, milk: "no", flavor: "plain",
-      scenes: ["focus", "special", "refresh"], brew: "ストレートで繊細な香りを。",
+      scenes: ["focus", "special", "refresh", "morning"], brew: "ストレートで繊細な香りを。",
       brandIds: ["dilmah", "lupicia"]
     },
     {

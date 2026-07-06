@@ -14,9 +14,11 @@
   /* ====== レコメンドロジック（純粋関数・テスト対象） ====== */
 
   function milkScore(pref, teaMilk) {
-    if (pref === "yes") return teaMilk === "good" ? 3 : (teaMilk === "ok" ? 1 : 0);
-    if (pref === "no") return teaMilk === "no" ? 2 : (teaMilk === "ok" ? 1 : 0);
-    return 1; // either
+    // ミルクを入れる → ミルク向きを加点、ストレート専用は減点
+    if (pref === "yes") return teaMilk === "good" ? 4 : (teaMilk === "ok" ? 2 : -3);
+    // ミルクを入れない → ストレート向きを加点、ミルク向き（濃く渋い）は減点
+    if (pref === "no") return teaMilk === "no" ? 3 : (teaMilk === "ok" ? 1 : -3);
+    return 0; // どちらでも（ミルク適性でバイアスをかけない）
   }
 
   function flavorScore(pref, teaFlavor) {
