@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TeaBreak — 気分で選ぶ紅茶</title>
+<meta name="description" content="今の気分を選ぶと、おすすめの紅茶とブランド・購入リンクを提案します。">
+<meta name="theme-color" content="#A8571E">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-mark">🫖</span>
+      <div class="brand-text">
+        <span class="brand-title">TeaBreak</span>
+        <span class="brand-sub">気分で選ぶ紅茶</span>
+      </div>
+    </div>
+    <button id="restart" class="header-restart" type="button" title="最初から">やり直す</button>
+  </header>
+
+  <p class="notice">
+    ☕ 感覚的な提案です（感じ方には個人差があります）。購入リンクは各サイトの<strong>検索リンク</strong>で、在庫・価格はサイト側に依存します（アフィリエイトはありません）。
+  </p>
+
+  <main id="chat-log" class="chat-log" role="log" aria-live="polite" aria-label="チャット"></main>
+
+  <div id="chips" class="chips" aria-label="選択肢"></div>
+</div>
+
+<script src="./data.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
