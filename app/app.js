@@ -52,9 +52,17 @@
       return a.tea.id < b.tea.id ? -1 : 1; // 安定化
     });
 
-    var top = scored.filter(function (x) { return x.score > 0; }).slice(0, 3);
+    var positive = scored.filter(function (x) { return x.score > 0; });
     var fallback = false;
-    if (top.length === 0) {
+    var top;
+    if (positive.length > 0) {
+      // B: 上位と乖離した“弱い候補”は出さない（無理に3件にしない）。
+      // 最高スコアから離れすぎたもの・低すぎるものは除外し、1〜3件に絞る。
+      var topScore = positive[0].score;
+      var floor = Math.max(2, topScore - 6);
+      top = positive.filter(function (x) { return x.score >= floor; }).slice(0, 3);
+      if (top.length === 0) top = positive.slice(0, 1); // 全て弱くても最低1件は出す
+    } else {
       // スコアが振るわない場合でも、ハード条件（カフェイン・温度）は必ず維持する。
       // scored は既にハードフィルタ済みなので、そのまま上位を採用する。
       fallback = true;

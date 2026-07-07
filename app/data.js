@@ -210,6 +210,27 @@
       caffeine: "none", hot: true, iced: false, milk: "no", flavor: "flavored",
       scenes: ["bedtime", "relax"], brew: "ふたをして蒸らし香りを閉じ込めて。",
       brandIds: ["lupicia", "generic"]
+    },
+    {
+      id: "hibiscus", name: "ハイビスカス&ローズヒップ（ノンカフェイン）", origin: "ハーブ",
+      profile: "甘酸っぱく鮮やかな赤。アイスで映える爽やかさ。",
+      caffeine: "none", hot: true, iced: true, milk: "no", flavor: "flavored",
+      scenes: ["refresh", "relax", "afterMeal"], brew: "濃いめに出して氷で。はちみつも好相性。",
+      brandIds: ["lupicia", "generic"]
+    },
+    {
+      id: "peppermint", name: "ペパーミント（ノンカフェイン）", origin: "ハーブ",
+      profile: "清涼感のある香り。食後やリフレッシュ、夜にも。",
+      caffeine: "none", hot: true, iced: true, milk: "no", flavor: "flavored",
+      scenes: ["refresh", "afterMeal", "bedtime"], brew: "ホットでもアイスでもすっきり。",
+      brandIds: ["generic", "lupicia"]
+    },
+    {
+      id: "honeybush", name: "ハニーブッシュ（ノンカフェイン）", origin: "南アフリカ",
+      profile: "はちみつのような自然な甘み。まろやかでクセが少ない。",
+      caffeine: "none", hot: true, iced: true, milk: "ok", flavor: "plain",
+      scenes: ["bedtime", "relax", "warm"], brew: "ゆっくり蒸らして甘みを引き出して。",
+      brandIds: ["lupicia", "generic"]
     }
   ];
 
