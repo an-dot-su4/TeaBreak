@@ -55,14 +55,10 @@
     var top = scored.filter(function (x) { return x.score > 0; }).slice(0, 3);
     var fallback = false;
     if (top.length === 0) {
-      // フィルタを温度のみに緩めてフォールバック
+      // スコアが振るわない場合でも、ハード条件（カフェイン・温度）は必ず維持する。
+      // scored は既にハードフィルタ済みなので、そのまま上位を採用する。
       fallback = true;
-      var loose = teas.filter(function (t) {
-        if (answers.temp === "iced" && !t.iced) return false;
-        if (answers.temp === "hot" && !t.hot) return false;
-        return true;
-      });
-      top = loose.slice(0, 3).map(function (t) { return { tea: t, score: 0 }; });
+      top = scored.slice(0, 3);
     }
     return { items: top.map(function (x) { return x.tea; }), fallback: fallback };
   }
